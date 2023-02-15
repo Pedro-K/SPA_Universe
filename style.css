@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url(./assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Sono';
+    src: url(./assets/fonts/Sono.ttf);
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    transition: all .4s;
+}
+
+body {
+    background-color: #3E4432;
+    font-family: 'Roboto-bold', sans-serif;
+    letter-spacing: 0;
+    color: #191713;
+    font-size: 1.6rem;
+    padding-top: 8rem;
+    display: flex;
+    justify-content: center;
+    transition: all .5s;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.hide {
+    display: none;
+}
+
+div.container{
+    width: 90%;
+    background-color: #F4F1E7;
+    border-radius: .4rem .4rem 0 0;
+    padding: 0 5rem 5rem 5rem;
+    min-height: 90rem;
+    max-height: 112rem;
+    position: fixed;
+    bottom: 0;
+}
+
+div.container nav{
+    padding: 2rem 0 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+div.container nav::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    border-radius: 50%;
+    background-color: #E0DAD1;
+    position: absolute;
+    bottom: 0;
+}
+
+div.container nav div.menu{
+    display: flex;
+    gap: 9rem;
+}
+
+div.container nav a{
+    color: #191713;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'Sono', sans-serif;
+    padding: 1rem;
+}
+
+div.container nav a svg{
+    width: 20rem;
+}
+
+div.container nav div.themeButton{
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+div.container div#app div.card{
+    position: relative;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.container div#app div.card h1{
+    margin-top: 1rem;
+    color: #fdf7ed;
+    font-size: 10rem;
+}
+
+div.container div#app div.card p{
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+body div.container div#app div.card h1:hover,
+body div.container div#app div.card p:hover{
+    background-color: #3e4432b2;
+    border-radius: .8rem;
+}
+
+div.container div#app div.card img{
+    position: absolute;
+    top: 4rem;
+    z-index: -2;
+    width: 100%;
+    border-radius: 1rem;
+    filter: blur(3px);
+}
+
+div.container div#app div.card img:hover{
+    filter: blur(1px);
+}
+
+
+div.container div#app div.card form{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+div.container div#app div.card form input{
+    padding: .8rem 0;
+}
+
+div.container div#app div.card form input,
+div.container div#app div.card form textarea{
+    width: 100%;
+    padding-left: 1.6rem;
+    border-radius: .4rem;
+}
+
+div.container div#app div.card form button{
+    width: 100%;
+    height: 3rem;
+    border-radius: .4rem;
+    background-color: #3E4432;
+    color: #F4F1E7;
+    font-size: 1.7rem;
+    font-family: 'Sono', sans-serif;
+}
+
+/* Light Mode */
+
+body.light {
+    background-color: #F4F1E7;
+}
+
+body.light div.container nav a svg path{
+    fill: #F4F1E7;
+}
+
+body.light div.container{
+background-color: #3E4432;
+}
+
+
+body.light div.container nav a{
+    color: #F4F1E7;
+}
+
+body.light .slider:before{
+    background-color: #3E4432;
+}
+
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 5rem;
+    height: 2rem;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3E4432;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.6rem;
+    width: 1.6rem;
+    left: 2px;
+    bottom: 2px;
+    background-color: #F4F1E7;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #F4F1E7;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #3e443200;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(3rem);
+    -ms-transform: translateX(3rem);
+    transform: translateX(3rem);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 4rem;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
